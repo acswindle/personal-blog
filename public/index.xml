@@ -2,16 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Chase&#39;s Blog</title>
-    <link>https://examplesite.com/</link>
+    <link>http://localhost:1313/personal-blog/</link>
     <description>Recent content on Chase&#39;s Blog</description>
     <image>
       <title>Chase&#39;s Blog</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://examplesite.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 19:39:59 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Dogs</title>
+      <link>http://localhost:1313/personal-blog/posts/my-dogs/</link>
+      <pubDate>Thu, 13 Feb 2025 19:39:59 -0600</pubDate>
+      <guid>http://localhost:1313/personal-blog/posts/my-dogs/</guid>
+      <description>&lt;h2 id=&#34;my-dogs&#34;&gt;My Dogs&lt;/h2&gt;
+&lt;p&gt;I have some of the best dogs in the world. This is Marti and Zizi.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

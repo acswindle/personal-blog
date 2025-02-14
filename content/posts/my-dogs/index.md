@@ -7,5 +7,3 @@ title = 'My Dogs'
 ## My Dogs
 
 I have some of the best dogs in the world. This is Marti and Zizi.
-
-![Marti](marti.png)
