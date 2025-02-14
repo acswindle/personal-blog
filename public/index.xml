@@ -11,16 +11,16 @@
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Feb 2024 19:32:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 19:39:59 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Tue, 13 Feb 2024 19:32:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
-      <description>&lt;h2 id=&#34;creating-hugo-site&#34;&gt;Creating Hugo Site&lt;/h2&gt;
-&lt;p&gt;This is a test page of my first blog.&lt;/p&gt;
-&lt;h2 id=&#34;set-up&#34;&gt;Set up&lt;/h2&gt;</description>
+      <title>My Dogs</title>
+      <link>http://localhost:1313/posts/my-dogs/</link>
+      <pubDate>Thu, 13 Feb 2025 19:39:59 -0600</pubDate>
+      <guid>http://localhost:1313/posts/my-dogs/</guid>
+      <description>&lt;h2 id=&#34;my-dogs&#34;&gt;My Dogs&lt;/h2&gt;
+&lt;p&gt;I have some of the best dogs in the world. This on is Marti.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Marti&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/my-dogs/marti.png&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
