@@ -1,5 +1,5 @@
 ---
-date: "2025-02-13T20:21:07-06:00"
+date: "2025-02-15"
 draft: false
 title: "DBMate and SQLC - Super Charge Your Database Workflow"
 tags: ["Database", "Go", "Sqlite"]
@@ -193,7 +193,7 @@ Go code that you can use to interact with your database. All the boiler plate
 of managing the database drivers and mapping raw tuples to/from Go data types
 is taken care of for us.
 
-First, we need to install it.
+First, we need to install SQLC.
 
 ```bash
 ~/Projects/task-manager>sudo snap install sqlc
@@ -208,3 +208,138 @@ Next we need to let SQLC know some things about our database.
 2. Database queries
 3. Database driver
 4. Go module name
+
+This is done in a yaml file. To initialize this file, run the following.
+
+```bash
+~/Projects/task-manager>sqlc init db/sqlc.yaml
+sqlc.yaml is added. Please visit https://docs.sqlc.dev/en/stable/reference/config.html to learn more about configuration
+```
+
+The output of this command gives us a [link](https://docs.sqlc.dev/en/stable/reference/config.html) for how to format the yaml schema.
+Lets open the schema file, and modify it as follows.
+
+```yaml
+version: "2"
+sql:
+  - schema: "db/migrations/"
+    queries: "db/queries.sql"
+    engine: "sqlite"
+    gen:
+      go:
+        package: "database"
+        out: "database"
+```
+
+The schema refers to our directory with our DBMate migrations.
+SQLC intgerops with DBMate and will automatically pull the schema from the
+"up" migrations and ignore the "down" migrations. The queries refer to our
+sql queries that our code can operate on. We can refer to a single file,
+like I've done here, or we can refer to a directory of files. I typically
+like to keep it all in one single file, but if you prefer many small files,
+go for it. The engine refers to our database, which is sqlite in this case.
+The gen section refers to the Go code we want to generate. In this case,
+we want to generate Go code under a module called database that we can
+import and utilize in our Go code.
+
+We generate the Go code using the following command.
+
+```bash
+~/Projects/task-manager>sqlc generate
+```
+
+This will generate the following three files.
+
+![three files](three-files.png)
+
+The generate code is now available for us to use.
+You do not need to ever touch these files.
+
+## Putting it all together
+
+Lets initialize our go project and add our sqlite3 database driver.
+
+```bash
+go mod init github.com/acswindle/task-manager
+go mod get github.com/mattn/go-sqlite3
+```
+
+And then we create our main.go file.
+
+```go
+package main
+
+import (
+ "context"
+ "database/sql"
+ "fmt"
+ "github.com/acswindle/task-manager/database"
+ _ "github.com/mattn/go-sqlite3"
+ "log"
+)
+
+func run() error {
+ fmt.Println("Running Task Manager...")
+ ctx := context.Background()
+
+ db, err := sql.Open("sqlite3", "./db/task-manager.sqlite3")
+ if err != nil {
+  return err
+ }
+
+ queries := database.New(db)
+
+ // list all authors
+ user := "John Doe"
+ id, err := queries.InsertUser(ctx, user)
+ if err != nil {
+  return err
+ }
+ fmt.Printf("Created user %s with ID: %d\n", user, id)
+ return nil
+}
+
+func main() {
+ if err := run(); err != nil {
+  log.Fatal(err)
+ }
+}
+```
+
+And then build and run our program.
+
+```bash
+~/Projects/task-manager>go run .
+Running Task Manager...
+Created user John Doe with ID: 1
+```
+
+Awesome, we were able to add a user to our database.
+
+To wrap things up, lets try to return a list of users.
+Lets add the following to our queries.sql file.
+
+```sql
+-- name: GetUsers :many
+select * from users;
+```
+
+And regenerate our go database module.
+
+```bash
+~/Projects/task-manager>sqlc generate
+```
+
+And then add the following to the end our of run function.
+
+```go
+ users, err := queries.GetUsers(ctx)
+ if err != nil {
+  return err
+ }
+ for _, user := range users {
+  fmt.Printf("Found user %s with ID: %d\n", user.Name, user.ID)
+ }
+```
+
+And viola, we have returned a list of users from our database.
