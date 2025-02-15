@@ -1,7 +1,7 @@
 baseURL: "https://acswindle.github.io/personal-blog/"
 title: Chase's Blog
 paginate: 5
-theme: PaperMod
+theme: [PaperMod]
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -73,14 +73,27 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Chase's Engineering Blog"
+    Content: >
+      Welcome to my blog, a space where we look into the
+      world of developing and operating software for a ever
+      changing world.
+      Here, I dive into the fascinating concepts of programming, 
+      software engineering, AI, data science, and DevOps. 
+      I mainly write these as a reference for my future self, 
+      but I hope you can glean some insight from them as well.
+      All work and no play makes Jack a dull boy,
+      so I also write up on other topics likes books and music
+      from time. I hope you enjoy the content and if so, leave 
+      me a comment on my socials.
 
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/in/chase-swindle-4650a029"
     - name: github
       url: "https://github.com/acswindle"
+    - name: youtube
+      url: "https://www.youtube.com/@cspythonforscience"
 
   analytics:
     google:
@@ -121,17 +134,13 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
     # lineNos: true
-    # style: monokai
+    style: monokai
