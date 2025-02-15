@@ -14,33 +14,38 @@ cover:
 
 ## Introduction
 
-Let me start this off by saying one thing, I am not a fan of ORM
+Let me start this off by saying one thing, I am not a fan of ORMs
 (Object Relational Mappers).
 If this bothers you, feel free to leave this article.
-The issue I have with ORM's is that abstracts away SQL, which is already a very
+The issue I have with ORMs is that it abstracts away SQL, which is already a very
 declarative way of writing data workflows.
 It is declarative in the sense that you write out what you want the
 result to look like,opposed to an imperative paradigm where you write
 out the explicitly steps to arrive at the result.
+It often time results in a
+[n+1 problem](https://www.neurelo.com/post/what-is-the-n-1-query-problem),
+degrading your application performance.
 
 However, the good quality of ORM's is that they allow you to easily map
-your database schema into datatypes of your programming language of choice.
+your database schema into the data types of your programming language of choice.
 This might be a dataclass or pydantic class in python, or a struct in golang.
-If you just use the built in database drivers, you often have to self
-manage the mapping raw tuples to/from the database driver into your datatypes.
+If you just use the built in database drivers, you often have to self-manage
+the mapping of raw tuples to/from the database driver back to your datatypes.
 This results in far more boiler plate in the codebase going back and forth between
-the desired datatype and tuples.
+the desired datatype and tuples. It can also result in errors and code
+that is later hard to understand later on.
 To be fair though, many database drivers have the concept of row factories
 which allow you to map database rows directly to hash maps / classes/ structs.
 However, many of often unaware of this feature and even then, it still
 typically results in more boiler plate compared to the ORM.
 
-Also, ORM's often include database migration tools, or have plugins that
+Another nice feature of ORMs is that they often include database migration tools,
+or have plugins that
 allow you to do so. This makes managing your database between production
-releases much easier and allow an easy mechanism to roll back in the event
+releases much easier. It also allows an easy mechanism to roll back in the event
 of a bad release. Managing database migrations without some supporting tooling
 can be a nightmare, as the onus is on the developer to organize the migration
-queries.
+queries in a logical manner.
 
 The great news is that these two features of ORMs can also be satified
 using only raw sql with the help of some additional tooling. Enter
@@ -49,10 +54,11 @@ DBMate and SQLC.
 ## DBMate - Migration Tool
 
 When developing a backend database, knowing how migrations
-are going to be managed needs to be one of the first considerations.
-[DBMate](https://github.com/amacneil/dbmate) is a great tool in this regard, and it is agnostic of the programming
+are going to be managed needs to be one of the [first considerations](https://medium.com/@oril_/why-do-you-need-database-migrations-b4e3b218fd16).
+[DBMate](https://github.com/amacneil/dbmate) is a great tool in this regard,
+and it is agnostic of the programming
 language of choice. To get started, I will build a new project for
-managings a database of user's tasks. (Yeah I know, real original...)
+managing a database of user's tasks. (Yeah I know, real original...)
 Let's first build our directory.
 
 ```bash
@@ -94,7 +100,7 @@ DATABASE_URL="sqlite:./db/task-manager.db"
 ```
 
 We should also add any dot env files into our git ignore to prevent exposing
-secrets and setting up conflicting build systems further down the line.
+secrets and conflicting configuration parameters into our [build systems](https://12factor.net/config).
 
 ```.gitignore
 *.env
@@ -156,7 +162,7 @@ Writing: ./db/schema.sql
 ```
 
 DBMate creates our database and creates the users table. To test it out,
-run the following in your favorite db query utility.
+run the following in your favorite db query utility or the sqlite3 shell.
 (I use [neovim Dadbod plugin](https://github.com/kristijanhusak/vim-dadbod-ui))
 
 ```sql
@@ -164,7 +170,7 @@ insert into users (name) values ('test');
 select * from users;
 ```
 
-And you should see your test user returned back.
+You should see your test user returned back.
 
 To roll back, run the following.
 
@@ -206,7 +212,7 @@ Next we need to let SQLC know some things about our database.
 
 1. Database schema
 2. Database queries
-3. Database driver
+3. Database engine
 4. Go module name
 
 This is done in a yaml file. To initialize this file, run the following.
@@ -232,7 +238,7 @@ sql:
 ```
 
 The schema refers to our directory with our DBMate migrations.
-SQLC intgerops with DBMate and will automatically pull the schema from the
+SQLC interops with DBMate and will automatically pull the schema from the
 "up" migrations and ignore the "down" migrations. The queries refer to our
 sql queries that our code can operate on. We can refer to a single file,
 like I've done here, or we can refer to a directory of files. I typically
@@ -252,7 +258,7 @@ This will generate the following three files.
 
 ![three files](three-files.png)
 
-The generate code is now available for us to use.
+And now the generated code is now available for us to use.
 You do not need to ever touch these files.
 
 ## Putting it all together
@@ -342,4 +348,17 @@ And then add the following to the end our of run function.
  }
 ```
 
+```bash
+~/Projects/task-manager>go run .
+Running Task Manager...
+Created user John Doe with ID: 2
+Found user John Doe with ID: 1
+Found user John Doe with ID: 2
+```
+
 And viola, we have returned a list of users from our database.
+
+You can check out the source code in its entirety [here](https://github.com/acswindle/task-manager/tree/sqlc-dbmate)
+
+Next time we will see how to use this project to implement a simple Rest API in go.
+Until next time 🍻
