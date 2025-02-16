@@ -138,9 +138,8 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
-    anchorLineNos: true
+    lineNos: true
     codeFences: true
     guessSyntax: true
-    # lineNos: true
+    noClasses: false
     style: monokai

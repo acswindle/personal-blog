@@ -5,6 +5,7 @@ title: "DBMate and SQLC - Super Charge Your Database Workflow"
 tags: ["Database", "Go", "Sqlite"]
 categories: ["Backend"]
 summary: "Super charge your backend database development with SQLC and DBMATE."
+weight: 2
 cover:
   image: "database-cover.jpg"
   relative: true

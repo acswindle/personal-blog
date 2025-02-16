@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up A Go Backend</title>
+      <link>http://localhost:1313/personal-blog/posts/go-backend-setup/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/posts/go-backend-setup/</guid>
+      <description>Getting started with a go backend.</description>
+    </item>
     <item>
       <title>DBMate and SQLC - Super Charge Your Database Workflow</title>
       <link>http://localhost:1313/personal-blog/posts/database-project-setup/</link>
