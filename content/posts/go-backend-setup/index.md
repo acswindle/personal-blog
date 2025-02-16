@@ -1,6 +1,6 @@
 ---
 date: "2025-02-16"
-draft: true
+draft: false
 title: "Setting Up A Go Backend"
 tags: ["HTTP", "Go", "Server"]
 categories: ["Backend"]
