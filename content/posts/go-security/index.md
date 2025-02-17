@@ -1,6 +1,6 @@
 ---
 date: "2025-02-16"
-draft: true
+draft: false
 title: "Setting Up Go Authentication"
 tags: ["HTTP", "Go", "Security","Authentication","JWT"]
 categories: ["Backend"]
