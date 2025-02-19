@@ -1,7 +1,8 @@
 baseURL: "https://acswindle.github.io/personal-blog/"
 title: Chase's Blog
-paginate: 5
 theme: [PaperMod]
+pagination:
+  pagesize: 1
 
 enableRobotsTXT: true
 buildDrafts: false

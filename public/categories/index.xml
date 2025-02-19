@@ -9,15 +9,22 @@
       <url>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.143.1</generator>
+    <generator>Hugo -- 0.144.1</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backend</title>
       <link>http://localhost:1313/personal-blog/categories/backend/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/personal-blog/categories/backend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/personal-blog/categories/devops/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/categories/devops/</guid>
       <description></description>
     </item>
   </channel>

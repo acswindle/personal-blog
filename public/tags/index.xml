@@ -9,29 +9,57 @@
       <url>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.143.1</generator>
+    <generator>Hugo -- 0.144.1</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Authentication</title>
-      <link>http://localhost:1313/personal-blog/tags/authentication/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/personal-blog/tags/authentication/</guid>
+      <title>Docker</title>
+      <link>http://localhost:1313/personal-blog/tags/docker/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DockerHub</title>
+      <link>http://localhost:1313/personal-blog/tags/dockerhub/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/tags/dockerhub/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
       <link>http://localhost:1313/personal-blog/tags/go/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/personal-blog/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CRUD</title>
+      <link>http://localhost:1313/personal-blog/tags/crud/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/tags/crud/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTP</title>
       <link>http://localhost:1313/personal-blog/tags/http/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/personal-blog/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>REST</title>
+      <link>http://localhost:1313/personal-blog/tags/rest/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Authentication</title>
+      <link>http://localhost:1313/personal-blog/tags/authentication/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/tags/authentication/</guid>
       <description></description>
     </item>
     <item>
