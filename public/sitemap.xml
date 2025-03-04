@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/personal-blog/posts/ec2-hosting/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/posts/jupyter-neovim-plugin/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/personal-blog/posts/docker-image/</loc>
     <lastmod>2025-02-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,31 +23,52 @@
     <loc>http://localhost:1313/personal-blog/posts/database-project-setup/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/aws/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/personal-blog/categories/backend/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/categories/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/categories/devops/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/tags/docker/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/ec2/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/posts/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/categories/data-science/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/jupyter/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/lua/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/neovim/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal-blog/tags/plugin/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/tags/dockerhub/</loc>
     <lastmod>2025-02-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/tags/go/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/personal-blog/posts/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/personal-blog/tags/</loc>
     <lastmod>2025-02-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/personal-blog/tags/crud/</loc>

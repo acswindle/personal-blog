@@ -9,10 +9,24 @@
       <url>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/personal-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.144.1</generator>
+    <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting a Go Application on EC2</title>
+      <link>http://localhost:1313/personal-blog/posts/ec2-hosting/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/posts/ec2-hosting/</guid>
+      <description>Learn how to host our Go Image on EC2 and allow others to use our API.</description>
+    </item>
+    <item>
+      <title>Creating a Jupyter Plugin for Neovim</title>
+      <link>http://localhost:1313/personal-blog/posts/jupyter-neovim-plugin/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-blog/posts/jupyter-neovim-plugin/</guid>
+      <description>Creating a Jupyter Plugin for Neovim.</description>
+    </item>
     <item>
       <title>Containerizing a Go Application</title>
       <link>http://localhost:1313/personal-blog/posts/docker-image/</link>
